@@ -1,5 +1,5 @@
-#ifndef DEFINESTOCKCLASS_H_
-#define DEFINESTOCKCLASS_H_
+#ifndef __DEFINESTOCKCLASS__H__
+#define __DEFINESTOCKCLASS__H__
 
 #include <string>
 using namespace std;
@@ -9,13 +9,12 @@ class Stock{
 	long shares;
 	double share_val;
 	double total_val;
-	void set_bot(){
-
+	void set_tot(){
 	 total_val=shares*share_val;
-
 	}
 
     public:
+	~Stock();
 	void acquire(const string &co,long n,double pr);
 	//购买股票
 	void buy(long num,double price);
